@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down</title>
+    
+<style>
+        
+.dropbtn {
+  background-color: #cc00ff;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #7400aa;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+.show {display:block;}
+        </style>
+</head>
+<body>
+    
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <li><a href="economia.com">Economia circolare</a></li>
+            <li><a href="economia.com">Economia</a></li>
+            <li><a href="economia.com">Regolamenti UE</a></li>
+            <li><a href="economia.com">principi fondamenteali</a></li>
+            <li><a href="economia.com">definizione economia circolare</a></li>
+            <li><a href="economia.com">pro e contro</a></li>
+        </div>
+      </div>
+    <ul>
+        
+        
+      </ul>
+
+<script>
+   
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
